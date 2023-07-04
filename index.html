@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/067340eff9.js" crossorigin="anonymous"></script>
+    <script src="validation.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="background">
+            <div class="logo">
+                <img class="bear" src="./images/bear-PhotoRoom.png" alt="logo">
+                <h1 class="sign-up-form">Sign-Up Form</h1>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="header">
+                <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h3>
+                <h3>You <em>know</em> you want to.</h3>
+            </div>
+            <div class="input-section">
+                <h3>Let's do this!</h3>
+                <form id="form-1" type="submit" onsubmit="return checkForm(this);" action="">
+            
+                    <label for="first_name">First Name
+                        <input type="text" name="first_name" id="first_name" title="Must contain only letters" pattern="[a-zA-Z]+" required>
+                    </label>
+                    <label for="last_name">Last Name
+                        <input type="text" name="last_name" id="last_name" title="Must contain only letters" pattern="[a-zA-Z]+" required>
+                    </label>
+
+                    <label for="email">Email
+                        <input type="email" name="email" id="email" title="Email required" required>
+                        <div id="email-error" class="error"></div>
+                    </label>
+
+                    <label for="phone">Phone Number
+                        <input type="tel" name="phone" id="phone" title="Must contain 10 digits" pattern="[0-9]{10}" required>
+                        <div id="phone-error" class="error"><span id="digits" class="invalid">Must contain 10 digits</span></div>
+                    </label>
+
+                    <label for="password">Password
+                        <input type="password" name="password" id="password" maxLength=10 required>
+                        <div id="password-error" class="error">Password must contain: <br>
+                            <span id="capital" class="invalid"> 1 capital letter</span> <br>
+                            <span id="lower" class="invalid"> 1 lowercase letter</span> <br>
+                            <span id="number" class="invalid"> 1 number</span>
+                        </div>
+                    </label>
+                    <label for="password">Confirm Password
+                        <input type="password" name="confirm_password" title="Passwords do not match" id="confirm_password" required>
+                        <div id="confirm-password-error" class="error">Passwords do not match*</div>
+                     </label>
+                </form>
+            </div>
+            <div class="submit-section">
+                <button type="submit" form="form-1" class="submit-button" >Create Account</button>
+                <p class="login">Already have an account? <a href="">Log In</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
